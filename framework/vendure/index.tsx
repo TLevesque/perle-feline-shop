@@ -3,13 +3,13 @@ import { ReactNode } from 'react'
 import {
   CommerceConfig,
   CommerceProvider as CoreCommerceProvider,
-  useCommerce as useCoreCommerce,
+  useCommerce as useCoreCommerce
 } from '@commerce'
 import { vendureProvider } from './provider'
 
 export const vendureConfig: CommerceConfig = {
-  locale: 'en-us',
-  cartCookie: 'session',
+  locale: 'en',
+  cartCookie: 'session'
 }
 
 export type VendureConfig = Partial<CommerceConfig>

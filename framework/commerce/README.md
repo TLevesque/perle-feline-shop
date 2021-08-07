@@ -41,8 +41,8 @@ Data fetching hooks use [SWR](https://swr.vercel.app/) underneath and you're wel
 ```jsx
 const { data, isLoading, error } = useCustomer({
   swrOptions: {
-    revalidateOnFocus: true,
-  },
+    revalidateOnFocus: true
+  }
 })
 ```
 
@@ -53,7 +53,7 @@ This component adds the provider config and handlers to the context of your Reac
 ```jsx
 import { CommerceProvider } from '@framework'
 
-const App = ({ locale = 'en-US', children }) => {
+const App = ({ locale = 'en', children }) => {
   return <CommerceProvider locale={locale}>{children}</CommerceProvider>
 }
 ```
@@ -75,7 +75,7 @@ const SignupView = () => {
       email,
       firstName,
       lastName,
-      password,
+      password
     })
   }
 
@@ -95,7 +95,7 @@ const LoginView = () => {
   const handleLogin = async () => {
     await login({
       email,
-      password,
+      password
     })
   }
 
@@ -155,7 +155,7 @@ const { data } = useCart()
 const { price, discount, basePrice } = usePrice(
   data && {
     amount: data.subtotalPrice,
-    currencyCode: data.currency.code,
+    currencyCode: data.currency.code
     // If `baseAmount` is used, a discount will be calculated
     // baseAmount: number,
   }
@@ -175,12 +175,12 @@ const SearchPage = ({ searchString, category, brand, sortStr }) => {
     search: searchString || '',
     categoryId: category?.entityId,
     brandId: brand?.entityId,
-    sort: sortStr,
+    sort: sortStr
   })
 
   return (
     <Grid layout="normal">
-      {data.products.map((product) => (
+      {data.products.map(product => (
         <ProductCard key={product.path} product={product} />
       ))}
     </Grid>
@@ -221,7 +221,7 @@ const AddToCartButton = ({ productId, variantId }) => {
   const addToCart = async () => {
     await addItem({
       productId,
-      variantId,
+      variantId
     })
   }
 
@@ -240,7 +240,7 @@ const CartItemQuantity = ({ item }) => {
   const [quantity, setQuantity] = useState(item.quantity)
   const updateItem = useUpdateItem({ item })
 
-  const updateQuantity = async (e) => {
+  const updateQuantity = async e => {
     const val = e.target.value
 
     setQuantity(val)
@@ -298,10 +298,10 @@ const WishlistButton = ({ productId, variant }) => {
 
   const { data: customer } = useCustomer()
   const itemInWishlist = data?.items?.find(
-    (item) => item.product_id === productId && item.variant_id === variant.id
+    item => item.product_id === productId && item.variant_id === variant.id
   )
 
-  const handleWishlistChange = async (e) => {
+  const handleWishlistChange = async e => {
     e.preventDefault()
     if (!customer) return
 
@@ -310,7 +310,7 @@ const WishlistButton = ({ productId, variant }) => {
     } else {
       await addItem({
         productId,
-        variantId: variant.id,
+        variantId: variant.id
       })
     }
   }

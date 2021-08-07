@@ -10,7 +10,7 @@ export type PageVariables = {
 }
 
 export default function getPageOperation({
-  commerce,
+  commerce
 }: OperationContext<Provider>) {
   async function getPage<T extends GetPageOperation>(opts: {
     variables: T['variables']
@@ -28,14 +28,14 @@ export default function getPageOperation({
 
   async function getPage<T extends GetPageOperation>({
     variables,
-    config,
+    config
   }: {
     query?: string
     variables: T['variables']
     config?: Partial<SwellConfig>
     preview?: boolean
   }): Promise<T['data']> {
-    const { fetch, locale = 'en-US' } = commerce.getConfig(config)
+    const { fetch, locale = 'en' } = commerce.getConfig(config)
     const id = variables.id
     const result = await fetch('content', 'get', ['pages', id])
     const page = result
@@ -44,9 +44,9 @@ export default function getPageOperation({
       page: page
         ? {
             ...page,
-            url: `/${locale}/${page.slug}`,
+            url: `/${locale}/${page.slug}`
           }
-        : null,
+        : null
     }
   }
 

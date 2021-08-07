@@ -17,15 +17,22 @@ const LOCALES_MAP: Record<string, LOCALE_DATA> = {
   es: {
     name: 'Español',
     img: {
-      filename: 'flag-es-co.svg',
-      alt: 'Bandera Colombiana',
+      filename: 'flag-es.svg',
+      alt: 'Bandera Española',
     },
   },
-  'en-US': {
+  en: {
     name: 'English',
     img: {
-      filename: 'flag-en-us.svg',
+      filename: 'flag-en.svg',
       alt: 'US Flag',
+    },
+  },
+  fr: {
+    name: 'Français',
+    img: {
+      filename: 'flag-fr.svg',
+      alt: 'Drapeau Français',
     },
   },
 }
@@ -35,9 +42,11 @@ const I18nWidget: FC = () => {
   const {
     locale,
     locales,
-    defaultLocale = 'en-US',
+    defaultLocale = 'en',
     asPath: currentPath,
   } = useRouter()
+  console.log("locales", locales);
+  console.log("locale", locale);
 
   const options = locales?.filter((val) => val !== locale)
   const currentLocale = locale || defaultLocale

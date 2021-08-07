@@ -4,12 +4,12 @@ import { localProvider } from './provider'
 import {
   CommerceConfig,
   CommerceProvider as CoreCommerceProvider,
-  useCommerce as useCoreCommerce,
+  useCommerce as useCoreCommerce
 } from '@commerce'
 
 export const localConfig: CommerceConfig = {
-  locale: 'en-us',
-  cartCookie: 'session',
+  locale: 'en',
+  cartCookie: 'session'
 }
 
 export function CommerceProvider({

@@ -15,13 +15,13 @@ import { handler as useSignup } from './auth/use-signup'
 import fetcher from './fetcher'
 
 export const shopifyProvider = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: SHOPIFY_CHECKOUT_ID_COOKIE,
   fetcher,
   cart: { useCart, useAddItem, useUpdateItem, useRemoveItem },
   customer: { useCustomer },
   products: { useSearch },
-  auth: { useLogin, useLogout, useSignup },
+  auth: { useLogin, useLogout, useSignup }
 }
 
 export type ShopifyProvider = typeof shopifyProvider

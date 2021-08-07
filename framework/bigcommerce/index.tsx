@@ -11,7 +11,7 @@ export { bigcommerceProvider }
 export type { BigcommerceProvider }
 
 export const bigcommerceConfig: CommerceConfig = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: 'bc_cartId',
 }
 

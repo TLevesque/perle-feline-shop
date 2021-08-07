@@ -1,12 +1,12 @@
 import {
   CommerceAPI,
   CommerceAPIConfig,
-  getCommerceApi as commerceApi,
+  getCommerceApi as commerceApi
 } from '@commerce/api'
 import {
   SWELL_CHECKOUT_ID_COOKIE,
   SWELL_CUSTOMER_TOKEN_COOKIE,
-  SWELL_COOKIE_EXPIRE,
+  SWELL_COOKIE_EXPIRE
 } from '../const'
 
 import fetchApi from './utils/fetch-swell-api'
@@ -23,13 +23,13 @@ export interface SwellConfig extends CommerceAPIConfig {
 }
 
 const config: SwellConfig = {
-  locale: 'en-US',
+  locale: 'en',
   commerceUrl: '',
   apiToken: ''!,
   cartCookie: SWELL_CHECKOUT_ID_COOKIE,
   cartCookieMaxAge: SWELL_COOKIE_EXPIRE,
   fetch: fetchApi,
-  customerCookie: SWELL_CUSTOMER_TOKEN_COOKIE,
+  customerCookie: SWELL_CUSTOMER_TOKEN_COOKIE
 }
 
 const operations = {
@@ -39,7 +39,7 @@ const operations = {
   getSiteInfo,
   getAllProductPaths,
   getAllProducts,
-  getProduct,
+  getProduct
 }
 
 export const provider = { config, operations }

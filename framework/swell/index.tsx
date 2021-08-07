@@ -20,7 +20,7 @@ export { swellProvider }
 export type { SwellProvider }
 
 export const swellConfig: any = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: SWELL_CHECKOUT_ID_COOKIE,
   swell,
 }

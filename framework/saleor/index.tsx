@@ -10,7 +10,7 @@ export { saleorProvider }
 export type { SaleorProvider }
 
 export const saleorConfig: CommerceConfig = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: Const.CHECKOUT_ID_COOKIE,
 }
 

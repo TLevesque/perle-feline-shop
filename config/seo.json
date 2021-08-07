@@ -1,26 +1,26 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "Perle Féline | Elegant and Erotic Lingerie",
+  "titleTemplate": "%s - Perle Féline",
+  "description": "Perle Féline - https://perlefeline.com",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "Perle Féline | Elegant and Erotic Lingerie",
+    "description": "Perle Féline - Elegant and Erotic Lingerie - https://perlefeline.com",
     "type": "website",
-    "locale": "en_IE",
-    "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "locale": "es-ES",
+    "url": "https://perlefeline.com",
+    "site_name": "Perle Féline",
     "images": [
       {
         "url": "/card.png",
         "width": 800,
         "height": 600,
-        "alt": "Next.js Commerce"
+        "alt": "Perle Féline"
       }
     ]
   },
   "twitter": {
-    "handle": "@nextjs",
-    "site": "@nextjs",
+    "handle": "@perlefeline",
+    "site": "@perlefeline",
     "cardType": "summary_large_image"
   }
 }

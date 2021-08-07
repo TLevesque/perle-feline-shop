@@ -17,14 +17,14 @@ import { handler as useSignup } from './auth/use-signup'
 import fetcher from './fetcher'
 
 export const swellProvider: Provider = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: SWELL_CHECKOUT_URL_COOKIE,
   // storeDomain: STORE_DOMAIN,
   fetcher,
   cart: { useCart, useAddItem, useUpdateItem, useRemoveItem },
   customer: { useCustomer },
   products: { useSearch },
-  auth: { useLogin, useLogout, useSignup },
+  auth: { useLogin, useLogout, useSignup }
 }
 
 export type SwellProvider = typeof swellProvider

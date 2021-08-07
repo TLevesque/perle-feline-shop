@@ -5,6 +5,7 @@ import NavbarRoot from './NavbarRoot'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
 
+
 interface Link {
   href: string
   label: string
@@ -43,9 +44,11 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
           <UserNav />
         </div>
       </div>
-      <div className="flex pb-4 lg:px-6 lg:hidden">
-        <Searchbar id="mobile-search" />
-      </div>
+      {process.env.COMMERCE_SEARCH_ENABLED && (
+        <div className="flex pb-4 lg:px-6 lg:hidden">
+          <Searchbar id="mobile-search" />
+        </div>
+      )}
     </Container>
   </NavbarRoot>
 )

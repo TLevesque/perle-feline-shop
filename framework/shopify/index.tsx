@@ -15,7 +15,7 @@ export { shopifyProvider }
 export type { ShopifyProvider }
 
 export const shopifyConfig: CommerceConfig = {
-  locale: 'en-us',
+  locale: 'en',
   cartCookie: SHOPIFY_CHECKOUT_ID_COOKIE,
 }
 

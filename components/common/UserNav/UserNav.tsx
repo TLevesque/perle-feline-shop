@@ -9,6 +9,7 @@ import { Heart, Bag } from '@components/icons'
 import { useUI } from '@components/ui/context'
 import DropdownMenu from './DropdownMenu'
 import s from './UserNav.module.css'
+import { I18nWidget } from '@components/common'
 
 interface Props {
   className?: string
@@ -46,15 +47,18 @@ const UserNav: FC<Props> = ({ className }) => {
               <DropdownMenu />
             ) : (
               <button
-                className={s.avatarButton}
-                aria-label="Menu"
-                onClick={() => openModal()}
+              className={s.avatarButton}
+              aria-label="Menu"
+              onClick={() => openModal()}
               >
                 <Avatar />
               </button>
             )}
           </li>
         )}
+        <li className={s.item}>
+            <I18nWidget />
+        </li>
       </ul>
     </nav>
   )
