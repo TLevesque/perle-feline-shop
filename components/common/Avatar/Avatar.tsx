@@ -11,13 +11,11 @@ const Avatar: FC<Props> = ({}) => {
   let { userAvatar } = useUserAvatar()
 
   return (
-    <div
-      ref={ref}
-      className="inline-block h-8 w-8 rounded-full border-2 border-primary"
-    >
+    <div ref={ref} className="inline-block h-8 w-8 rounded-full border-primary">
       <svg
-        enable-background="new 0 0 100 100"
-        fill="#1A1A1A"
+        height="32"
+        enableBackground="new 0 0 100 100"
+        fill="#fff"
         version="1.1"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"

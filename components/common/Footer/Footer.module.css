@@ -1,4 +1,5 @@
 .root {
+  background-color: #292021;
   @apply border-t border-accent-2;
 }
 

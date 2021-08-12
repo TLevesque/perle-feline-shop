@@ -5,7 +5,6 @@ import NavbarRoot from './NavbarRoot'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
 
-
 interface Link {
   href: string
   label: string
@@ -25,9 +24,11 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             </a>
           </Link>
           <nav className={s.navMenu}>
+            {process.env.COMMERCE_SEARCH_ENABLED && (
             <Link href="/search">
               <a className={s.link}>All</a>
-            </Link>
+              </Link>
+              )}
             {links?.map((l) => (
               <Link href={l.href} key={l.href}>
                 <a className={s.link}>{l.label}</a>

@@ -3,7 +3,7 @@
 }
 
 .button {
-  @apply h-10 px-2 rounded-md border border-accent-2 flex items-center justify-center transition-colors ease-linear;
+  @apply h-10 px-2 rounded-md border-accent-2 flex items-center justify-center transition-colors ease-linear;
 }
 
 .button:hover {
@@ -15,10 +15,10 @@
 }
 
 .dropdownMenu {
-  @apply fixed right-0 top-12 mt-2 origin-top-right outline-none bg-primary z-40;
+  @apply fixed right-0 top-12 mt-2 origin-top-right outline-none bg-primary z-40 rounded-md;
 
   @screen lg {
-    @apply absolute border border-accent-1 shadow-lg w-56 h-auto;
+    @apply absolute border border-accent-1 shadow-lg w-56 h-auto rounded-md;
   }
 }
 
@@ -38,6 +38,7 @@
 }
 
 .icon {
+  color: white;
   transition: transform 0.2s ease;
 }
 

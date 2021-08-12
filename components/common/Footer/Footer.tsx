@@ -29,9 +29,9 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-white transition-colors duration-150">
             {"FOOTER"}
-          <I18nWidget />
+          {/* <I18nWidget /> */}
           {/* <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex flex-initial items-center font-bold md:mr-24">
@@ -55,8 +55,8 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </div>
           </div> */}
-          <div className="col-span-1 lg:col-span-2 flex items-start lg:justify-end text-primary">
-            {/* <div className="flex space-x-6 items-center h-10">
+          {/* <div className="col-span-1 lg:col-span-2 flex items-start lg:justify-end text-primary">
+            <div className="flex space-x-6 items-center h-10">
               <a
                 className={s.link}
                 aria-label="Github Repository"
@@ -64,10 +64,10 @@ const Footer: FC<Props> = ({ className, pages }) => {
               >
                 <Github />
               </a>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
         </div>
-        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
+        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-white text-sm">
           <div>
             <span>&copy; 2021 Perle Féline, SL. All rights reserved.</span>
           </div>
